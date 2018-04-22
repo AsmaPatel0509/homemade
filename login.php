@@ -33,7 +33,7 @@
 	  if(mysqli_num_rows($result)==1)
 	  {
 		  $_SESSION['login_session']=$u_id;
-		  header("location:index.html");
+		  header("location:index.html");// what user will see after logging in
 		  echo "true";
 	  }
 	  else
@@ -43,7 +43,7 @@
 			if(mysqli_num_rows($result)==1)
 			{
 				  $_SESSION['login_session']=$email;
-				  header("location://write location of page that merchant will see//");
+				  header("location://write location of page that merchant will see//");// what merchant will see after logging 																											in
 				  echo "true";
 			}else{
 			echo nl2br("<h1 style='color:red'>Email or Password is Incorrect , Please Recheck Credentials. \n</h1>");
