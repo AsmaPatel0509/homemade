@@ -1,5 +1,21 @@
 <?php
-session_start();
+
+include("session.php");
+if(!isset($_SESSION['login_session']))
+{
+	header('location:index.html');	
+}
+if($isAdmin==2)
+{
+	header('location:login.php');
+}else if($isAdmin ==1)
+{
+	header('location:admin.php');
+}
+?>
+
+<?php
+
 $dbuser="root";
 $dbpass="";
 $host="localhost";
@@ -7,12 +23,17 @@ $db="home_made";
 $conn =mysql_connect($host,$dbuser,$dbpass);
 mysql_select_db($db,$conn);
 $aid=$_SESSION['id'];
+
+$u_id=;
+$m_id=;
+
 if($_POST['addtocart1'])
 {
 	
 	$name=$_POST['mid1'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(u_id,m_id,status) values('$aid','$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -27,8 +48,9 @@ elseif($_POST['addtocart2'])
 {
 	
 	$name=$_POST['mid2'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(m_id,status) values('$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -43,8 +65,9 @@ elseif($_POST['addtocart3'])
 {
 	
 	$name=$_POST['mid3'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(m_id,status) values('$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -59,8 +82,9 @@ elseif($_POST['addtocart4'])
 {
 	
 	$name=$_POST['mid4'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(m_id,status) values('$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -75,8 +99,9 @@ elseif($_POST['addtocart5'])
 {
 	
 	$name=$_POST['mid5'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(m_id,status) values('$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -91,8 +116,9 @@ elseif($_POST['addtocart6'])
 {
 	
 	$name=$_POST['mid6'];
+	$u_id = $_SESSION['login_session'];
 	
-	$query="insert into pending(m_id,status) values('$name','0')";
+	$query="INSERT INTO pending(u_id, m_id, status, ) VALUES ('".$u_id."','".$name."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -103,7 +129,6 @@ elseif($_POST['addtocart6'])
 		echo "<script>alert(mysql_error());</script>";
 	}
 }
-
 ?>
 <html>
 <head>
@@ -112,7 +137,7 @@ elseif($_POST['addtocart6'])
 </head>
 <body>
 	<object type="text/html" data="header.html" width="1510px" height="70px"></object>
-	<form action="" method="post">
+	<form action="ring.php" method="post">
 	<div class="outer">
 		<div class="innerhead"> Rings </div>
 		
