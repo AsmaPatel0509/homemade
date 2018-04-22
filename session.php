@@ -21,11 +21,12 @@
 	//storing session
 	$isAdmin =2;//LoggedOut
 	$user_check = $_SESSION['login_session'];
-	$query = mysqli_query($conn,"Select * from user where u_id='$user_check'");
-	$result= mysqli_fetch_assoc($query);
+	
 	if(mysqli_num_rows($query)==1)
 	{
 		$isAdmin = 0;//login is user
+		$query = mysqli_query($conn,"Select * from user where u_id='$user_check'");
+		$result= mysqli_fetch_assoc($query);
 		$login_session ="".$result['u_id']."";
 		$u_id = "".$result['u_id']."";
 		$m_id = "".$result['m_id']."";
