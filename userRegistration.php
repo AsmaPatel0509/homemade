@@ -27,20 +27,27 @@ if($_POST['s'])
 ?>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<style type="text/css">
+			input{
+				background-color: transparent;
+				border: 1px solid navy;
+			}
+		</style>
 	</head>
 	<body><center>
-			<div align="center" style="margin-top:75px; border:1px solid black; width:350px; height:150px;">
+			<div align="center" style="margin-top:30px; border: 2px solid yellow; width:370px; height:300px; font-family: Perpetua; font-size: 24px; color: green; border-radius: 10px;">
 		
-			CUSTOMER REGISTRATION <br>
+			<h3 style="color: maroon;"> CUSTOMER REGISTRATION </h3> 
 			<form method="post" action="">
 			NAME <input type="text" name="name"/> <br>
 			Email <input type="email" name="email" /> <br>
-			Contact Number <input type="number" name="number" /> <br>
+			Contact Number <input type="text" name="number" /> <br>
 			Password <input type="password" name="password"/><br>
 			<input type="submit" value="Sign up" name="s"/><br>
 			</form>
 			<div>
-			<a href="index.html">Go back to main page</a>
+			<a href="index.html" style="text-decoration: underline;"> Go back to main page </a>
 			</center>
 	</body>
 </html>
