@@ -1,13 +1,13 @@
 .hdr1{
 	height: 50px;
 	width: 1500px;
-	border: 1px solid black;
+	border: none;
 	background-image: url('img/imgpoly.jpg');
 }
 .icondiv{
 	height: 45px;
 	width: 250px;
-	border: 1px solid black;
+	border: none;
 	float: left;
 	padding: 3px 1px 1px;
 }
@@ -20,15 +20,15 @@
 	text-align: center;
 }
 .search{
-	border: 1px solid black;
+	border: none;
 }
 .signup{
-	border: 1px solid black;
+	border: none;
 	padding-top: 12px;
 	padding-left: 30px;
 }
 .cart{
-	border: 1px solid black;
+	border: none;
 	padding-top: 12px;
 	padding-left: 30px;
 }
