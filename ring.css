@@ -1,0 +1,98 @@
+body{
+	background-color: gray;
+}
+
+.outer{
+	height: 1600px;
+	width: 1500px;
+	border: 1px solid black;
+	background-image: url('img/backgrnd2.jpg');	
+}
+.float{
+	float: left;
+}
+.innerhead{
+	height: 50px;
+	width: 1000px;
+	border: 1px solid black;
+	margin: 50px;
+	font-family: Perpetua;
+	color: orange;
+	font-size: 26px;
+	font-weight: bold;
+	padding: 10px;
+}
+.innermain{
+	margin-left: 100px;
+	height: 450px;
+	width: 900px;
+	border: 1px solid black;
+}
+.innouter{
+	height: 350px;
+	width: 190px;
+	border: 1px solid black;
+	margin: 50px;
+}
+.inner1{
+	height:30px;
+	width: 173px;
+	border: 1px solid black;
+	text-align: center;
+}
+.inner2{
+	height: 210px;
+	width: 190px;
+	border: 1px solid black;
+}
+.inner3{
+	height: 30px;
+	width: 170px;
+	border: 1px solid black;
+}
+.font{
+	font-family: Perpetua;
+	font-size: 24px;
+	color: purple;
+}
+.button{
+	background-color: navy;
+    border: 1px solid navy;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial Black;
+}
+.price{
+	width: 30px;
+	font-size: 14px;
+	background-color: lavender;
+	border: 1px solid teal;
+	text-align: center;
+	color: teal;
+}
+.productname{
+	width: 140px;
+	background-color: transparent;
+	color: maroon;
+	font-size: 14px;
+	border: none;
+}
+.quantity{
+	height: 20px;
+	width: 40px;
+	background-color: pink;
+	border: none;
+	margin-bottom: 5px;
+}
+.merchantname{
+	width: 90px;
+	border: 1px solid black; 
+	background-color: lavender;
+	font-family: Perpetua;
+	font-size: 18px;
+	text-align: center;
+	color: maroon;
+}

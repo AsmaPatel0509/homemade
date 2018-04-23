@@ -3,19 +3,19 @@ body{
 }
 
 .outer{
-	height: 1600px;
+	height: 1000px;
 	width: 1500px;
-	border: 1px solid black;
+	border: none;
 	background-image: url('img/backgrnd2.jpg');	
 }
 .float{
 	float: left;
 }
 .innerhead{
-	height: 50px;
+	height: 30px;
 	width: 1000px;
-	border: 1px solid black;
-	margin: 50px;
+	border: none;
+	margin: 10px;
 	font-family: Perpetua;
 	color: orange;
 	font-size: 26px;
@@ -24,26 +24,32 @@ body{
 }
 .innermain{
 	margin-left: 100px;
-	height: 350px;
+	height: 250px;
 	width: 900px;
-	border: 1px solid black;
+	border: none;
 }
 .innouter{
 	height: 250px;
 	width: 190px;
-	border: 1px solid black;
-	margin: 50px;
+	border: none;
+	margin-right: 30px;
 }
 .inner1{
 	height:30px;
-	width: 173px;
-	border: 1px solid black;
-	padding: 10px 0px 0px 15px;
+	width: 190px;
+	border: none;
+	text-align: left;
 }
 .inner2{
 	height: 210px;
 	width: 190px;
-	border: 1px solid black;
+	border: none;
+	margin-right: 10px;
+}
+.inner3{
+	height: 30px;
+	width: 170px;
+	border: none;
 }
 .font{
 	font-family: Perpetua;
