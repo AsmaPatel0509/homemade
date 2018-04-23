@@ -134,11 +134,22 @@ elseif($_POST['addtocart6'])
 ?>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css"  href="index.css">
+	<!--<link rel="stylesheet" type="text/css"  href="index.css">-->
 	<title> Rings </title>
 </head>
 <body>
-	<object type="text/html" data="header.html" width="1510px" height="70px"></object>
+	<!--<object type="text/html" data="header.html" width="1510px" height="70px"></object>-->
+	<?php 
+	 if(!isset($_SESSION['login_session']))
+	 {			
+			include('header.html'); 		
+	 }
+	 else
+	 {
+			include('headerlogout.html'); 
+	 }	
+	?>	 
+	<style><?php include 'index.css'; ?></style>
 	<form  method="post">
 	<div class="outer">
 		<div class="innerhead"> Rings </div>
@@ -149,54 +160,55 @@ elseif($_POST['addtocart6'])
 					<img src="img/ring1.jpg" class="inner2">
 				</div>
 				<div class="inner1 font"><input type="text" value="Transparent ring" name="r1"/></div>
-				<div class="inner1 font"><input type="text" value="Rs. 80" name="a1"/></div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart1" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant1" name="mid1"/></center> </div>
+				PRICE<div class="inner1 font"><input type="text" value="80" name="a1"/></div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart1" value="AddToCart" class="button">
+				<input type="number" name="number" /></center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant1" name="mid1"/></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
 					<img src="img/ringrose.jpg" class="inner2">
 				</div>
 				<div class="inner1 font"> <input type="text" value="Rose" name="r2"/>  </div>
-				<div class="inner1 font"> <input type="text" value="Rs. 100" name="a2"/>  </div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart2" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant2" name="mid2"/></center> </div>
+				<div class="inner1 font"> <input type="text" value="100" name="a2"/>  </div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart2" value="AddToCart" class="button"> </center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant2" name="mid2"/></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
 					<img src="img/ringpearl.jpg" class="inner2">
 				</div>
 				<div class="inner1 font">  <input type="text" value="Pearl ring" name="r3"/> </div>
-				<div class="inner1 font">  <input type="text" value="Rs. 500" name="a3"/> </div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart3" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant1" name="mid3"/></center> </div>
+				<div class="inner1 font">  <input type="text" value="500" name="a3"/> </div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart3" value="AddToCart" class="button"> </center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant1" name="mid3"/></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
 					<img src="img/ringsinfinity.jpg" class="inner2">
 				</div>
 				<div class="inner1 font"><input type="text" value="Infinity ring" name="r4"/>  </div>
-				<div class="inner1 font"><input type="text" value="Rs. 100" name="a4"/>  </div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart4" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant2" name="mid4"/></center> </div>
+				<div class="inner1 font"><input type="text" value="100" name="a4"/>  </div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart4" value="AddToCart" class="button"> </center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant2" name="mid4"/></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
 					<img src="img/ringsinter.jpg" class="inner2">
 				</div>
 				<div class="inner1 font"><input type="text" value="Interlocked rings" name="r5"/></div>
-				<div class="inner1 font"><input type="text" value="Rs. 300" name="a5"/></div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart5" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant3" name="mid5"/></center> </div>
+				<div class="inner1 font"><input type="text" value="300" name="a5"/></div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart5" value="AddToCart" class="button"> </center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant3" name="mid5"/></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
 					<img src="img/ringpearls.jpg" class="inner2">
 				</div>
 				<div class="inner1 font"><input type="text" value="Pearl ring" name="r6"/> </div>
-				<div class="inner1 font"><input type="text" value="Rs. 1000" name="a6"/> </div>
-				<div class="iner3"> <center> <input type="submit" name="addtocart6" value="AddToCart" class="button"> </center> </div>
-				<div class="iner3"> <center> <input type="text" value="merchant2" name="mid6"/></center> </div>
+				<div class="inner1 font"><input type="text" value="1000" name="a6"/> </div>
+				<div class="inner3"> <center> <input type="submit" name="addtocart6" value="AddToCart" class="button"> </center> </div>
+				<div class="inner3"> <center> <input type="text" value="merchant2" name="mid6"/></center> </div>
 			</div>
 		</div>
 </div>

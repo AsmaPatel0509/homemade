@@ -8,7 +8,8 @@
 	
 	
 	if(isset($_SESSION['login_session'])){		
-		header("location:index.html");//Redirecting to homepage
+		echo "alert('session set')";
+		header("location:index.php");//Redirecting to homepage
 	}
 	//Make Connection
 	$conn = new mysqli($servername,$server_username,$server_password,$dbName);
@@ -33,7 +34,8 @@
 	  if(mysqli_num_rows($result)==1)
 	  {
 		  $_SESSION['login_session']=$u_id;
-		  header("location:index.html");// what user will see after logging in
+		  echo "alert('set')";
+		  header("location:index.php");// what user will see after logging in
 		  echo "true";
 	  }
 	  /*else
@@ -58,29 +60,15 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.slidertron.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		
 	</head>
 	<body>
-
+		<?php include('header.html');?>
+		<style><?php include 'index.css'; ?></style>
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
-			<h1><a href="index.html">Homemade - Login :<span> Fill Information.</span></a></h1>
-			</header>
+			<!--<header id="header" class="skel-layers-fixed">-->
+			<h1>Homemade - Login :<span> Fill Information.</span></h1>
+			<!--</header>-->
 			
 			<br/>
 			
@@ -106,7 +94,7 @@
 										</div>
 									</form>
 								</section>
-		<a href="register.html">Not a member? Register here</a>
+		<a href="userRegister.php">Not a member? Register here</a>
 		</div>
 
 </body>
