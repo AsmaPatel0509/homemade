@@ -34,24 +34,32 @@ if($_POST['s'])
 ?>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<title> Merchant Registration </title>
+		<style type="text/css">
+			input{
+				background-color: transparent;
+				border: 1px solid navy;
+			}
+		</style>
 	</head>
 	<body> <center>
-			<div align="center" style="margin-top:75px; border:1px solid black; width:350px;">
-			MERCHANT REGISTRATION <br><br>
+			<div align="center" style="margin-top:30px; border: 2px solid yellow; width:370px; height:630px; font-family: Perpetua; font-size: 24px; color: green; border-radius: 10px;">
+			<h3 style="color: maroon;"> MERCHANT REGISTRATION </h3> 
 			<form method="post" action="">
-				NAME <input type="text" name="name"/> <br><br>
-				Email <input type="email" name="email" /> <br><br>
-				Contact Number <input type="number" name="number" /> <br><br>
-				Password <input type="text" name="password"/><br><br>
-				Address <textarea cols="10" rows="2" name="address"> </textarea> <br><br>
-				Products <br><br>
+				NAME: <input type="text" name="name"/> <br><br>
+				Email: <input type="email" name="email" /> <br><br>
+				Contact Number: <input type="number" name="number" /> <br><br>
+				Password: <input type="text" name="password"/><br><br>
+				Address: <textarea cols="20" rows="4" name="address"> </textarea> <br><br>
+				Products: <br>
 				<input type="checkbox" name="product[]" id="product" value="handicrafts" /> Handicrafts <br>
 				<input type="checkbox" name="product[]" id="product" value="jewelery" /> Jewelery <br>
 				<input type="checkbox" name="product[]" id="product" value="snacks" /> Snacks <br>
-				<input type="submit" value="Sign up" name="s"/><br>
+				<input type="submit" value="Sign up" name="s" style="height: 30px; width: 65px; border-radius: 5px; background-color: yellow;font-family: Perpetua; font-size: 18px; " /><br>
 			</form>
 			<div>
-			<a href="index.html">Go back to main page</a>
+			<a href="index.html" style="text-decoration: underline;"> Go back to main page </a>
 			</center>
 	</body>
 </html>
