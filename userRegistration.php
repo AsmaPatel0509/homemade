@@ -34,6 +34,7 @@ if($_POST['s'])
 				border: 1px solid navy;
 			}
 		</style>
+		<title> Customer Registration </title>
 	</head>
 	<body><center>
 			<div align="center" style="margin-top:30px; border: 2px solid yellow; width:370px; height:300px; font-family: Perpetua; font-size: 24px; color: green; border-radius: 10px;">
