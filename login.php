@@ -1,4 +1,5 @@
 <?php
+	error_reporting(E_ERROR | E_PARSE);
 	session_start();
 	//Serverdata
 	$servername = "localhost";
@@ -29,7 +30,7 @@
 		
       
       $sql = "SELECT * FROM user WHERE u_id = '$u_id' and password = '$password'";
-      $result = mysqli_query($conn,$sql);
+-      $result = mysqli_query($conn,$sql);
       
 	  if(mysqli_num_rows($result)==1)
 	  {

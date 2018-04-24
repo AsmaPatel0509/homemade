@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 $dbuser="root";
 $dbpass="";
 $host="localhost";
@@ -24,31 +25,24 @@ if($_POST['s'])
 		echo "<script>alert(mysql_error());</script>";
 	}
 }
+
 ?>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<style type="text/css">
-			input{
-				background-color: transparent;
-				border: 1px solid navy;
-			}
-		</style>
-		<title> Customer Registration </title>
 	</head>
-	<body><center>
-			<div align="center" style="margin-top:30px; border: 2px solid yellow; width:370px; height:300px; font-family: Perpetua; font-size: 24px; color: green; border-radius: 10px;">
-		
-			<h3 style="color: maroon;"> CUSTOMER REGISTRATION </h3> 
-			<form method="post" action="">
-			NAME <input type="text" name="name"/> <br>
-			Email <input type="email" name="email" /> <br>
-			Contact Number <input type="text" name="number" /> <br>
-			Password <input type="password" name="password"/><br>
-			<input type="submit" value="Sign up" name="s"/><br>
+	<body style="background-image:url('img/backgrnd2.jpg')"><center>
+			<div align="center" style="margin-top:75px;width:350px; height:300px;">
+			<b>
+			<h1>CUSTOMER REGISTRATION </h1><br><br>
+			<form method="post" action=""><h3>
+			NAME <input type="text" name="name"/> <br><br><br>
+			Email <input type="email" name="email" /> <br><br><br>
+			Contact Number <input type="number" name="number" /> <br><br><br>
+			Password <input type="password" name="password"/><br><br><br>
+			<input type="submit" value="Sign up" name="s" style="font-size:20px;"/><br><br></h3>
 			</form>
 			<div>
-			<a href="index.html" style="text-decoration: underline;"> Go back to main page </a>
-			</center>
+			<a href="index.php"><h2>Go back to main page</h2></a>
+			</center></b>
 	</body>
 </html>

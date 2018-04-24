@@ -1,9 +1,9 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
+
 include("session.php");
 if(!isset($_SESSION['login_session']))
 {
-	header('location:signuplogin.html');	
+	header('location:index.html');	
 }
 if($isAdmin==2)
 {
@@ -30,8 +30,7 @@ if($_POST['addtocart1'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r1'];
 	$amt=$_POST['a1'];
-	$qty=$_POST['n1'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -49,10 +48,7 @@ elseif($_POST['addtocart2'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r2'];
 	$amt=$_POST['a2'];
-	
-	$qty=$_POST['n2'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
-	
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -70,9 +66,7 @@ elseif($_POST['addtocart3'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r3'];
 	$amt=$_POST['a3'];
-	$qty=$_POST['n3'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
-	
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -90,9 +84,7 @@ elseif($_POST['addtocart4'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r4'];
 	$amt=$_POST['a4'];
-	$qty=$_POST['n4'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
-	
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -110,9 +102,7 @@ elseif($_POST['addtocart5'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r5'];
 	$amt=$_POST['a5'];
-	$qty=$_POST['n5'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
-	
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -130,9 +120,7 @@ elseif($_POST['addtocart6'])
 	$u_id = $_SESSION['login_session'];
 	$pname=$_POST['r6'];
 	$amt=$_POST['a6'];
-	$qty=$_POST['n6'];
-	$query="INSERT INTO pending(u_id, m_id,p_name,qty,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$qty."','".$amt."','0')";
-	
+	$query="INSERT INTO pending(u_id, m_id,p_name,price,status) VALUES ('".$u_id."','".$name."','".$pname."','".$amt."','0')";
 	$s1=mysql_query($query,$conn);
 	if($s1)
 	{
@@ -146,21 +134,12 @@ elseif($_POST['addtocart6'])
 ?>
 <html>
 <head>
-	<!--<link rel="stylesheet" type="text/css"  href="index.css">-->
+	<!--<link rel="stylesheet" type="text/css"  href="ring.css">-->
 	<title> Rings </title>
 </head>
 <body>
 	<!--<object type="text/html" data="header.html" width="1510px" height="70px"></object>-->
-	<?php 
-	 if(!isset($_SESSION['login_session']))
-	 {			
-			include('header.html'); 		
-	 }
-	 else
-	 {
-			include('headerlogout.html'); 
-	 }	
-	?>	 
+	<?php include('header.html');?>
 	<style><?php include 'ring.css'; ?></style>
 	<form  method="post">
 	<div class="outer">
@@ -174,7 +153,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Transparent ring" name="r1" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="80" name="a1" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart1" value="AddToCart" class="button">
-				<input type="number" name="n1" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant1" name="mid1" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant1" name="mid1" class="merchantname" /></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
@@ -183,7 +162,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Rose ring, copper" name="r2" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="100" name="a2" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart2" value="AddToCart" class="button">
-				<input type="number" name="n2" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant2" name="mid2" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant2" name="mid2" class="merchantname" /></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
@@ -192,7 +171,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Pearl ring" name="r3" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="500" name="a3" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart3" value="AddToCart" class="button">
-				<input type="number" name="n3" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant3" name="mid3" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant3" name="mid3" class="merchantname" /></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
@@ -201,7 +180,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Infinity ring" name="r4" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="70" name="a4" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart4" value="AddToCart" class="button">
-				<input type="number" name="n4" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant4" name="mid4" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant4" name="mid4" class="merchantname" /></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
@@ -210,7 +189,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Interlocked rings" name="r5" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="300" name="a5" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart5" value="AddToCart" class="button">
-				<input type="number" name="n5" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant3" name="mid5" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant3" name="mid5" class="merchantname" /></center> </div>
 			</div>
 			<div class="innouter float">
 				<div class="inner2"> 
@@ -219,7 +198,7 @@ elseif($_POST['addtocart6'])
 				<div class="inner1 font"> <input type="text" value="Pearl ring" name="r6" class="productname" /></div>
 				<div class="inner1"> Price :  <input type="text" value="1000" name="a6" class="price" /></div>
 				<div class="inner3"> <center> <input type="submit" name="addtocart6" value="AddToCart" class="button">
-				<input type="number" name="n6" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant2" name="mid6" class="merchantname" /></center> </div>
+				<input type="number" name="number" class="quantity" placeholder="No." /> <br> <input type="text" value="Merchant2" name="mid6" class="merchantname" /></center> </div>
 			</div>
 		</div>
 </div>

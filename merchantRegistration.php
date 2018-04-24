@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 $dbuser="root";
 $dbpass="";
 $host="localhost";
@@ -34,32 +35,34 @@ if($_POST['s'])
 ?>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<title> Merchant Registration </title>
-		<style type="text/css">
-			input{
-				background-color: transparent;
-				border: 1px solid navy;
-			}
-		</style>
 	</head>
-	<body> <center>
-			<div align="center" style="margin-top:30px; border: 2px solid yellow; width:370px; height:630px; font-family: Perpetua; font-size: 24px; color: green; border-radius: 10px;">
-			<h3 style="color: maroon;"> MERCHANT REGISTRATION </h3> 
+	<body style="background-image:url('img/backgrnd2.jpg')"> <center>
+	
+		<h1> 	MERCHANT REGISTRATION </h1>
+			<div align="center" style="margin-top:0px; width:350px; height:600px;">
+		 <br><br>
 			<form method="post" action="">
-				NAME: <input type="text" name="name"/> <br><br>
-				Email: <input type="email" name="email" /> <br><br>
-				Contact Number: <input type="number" name="number" /> <br><br>
-				Password: <input type="text" name="password"/><br><br>
-				Address: <textarea cols="20" rows="4" name="address"> </textarea> <br><br>
-				Products: <br>
+				<h3>
+				<div style="height:30px;width:250px;">
+				NAME <input type="text" name="name" size="20"/>  </div> <br>
+				<div style="height:30px;width:250px;">
+				Email <input type="email" name="email" /> </div><br>
+				<div style="height:30px;width:331px;">
+				Contact Number <input type="text" name="number" /> </div><br>
+				<div style="height:30px;width:331px;">
+				Password <input type="text" name="password"/></div><br>
+				<div style="height:60px;width:250px;">
+				Address <textarea cols="10" rows="2" name="address"> </textarea> </div><br>
+				<div style="height:30px;width:250px;">
+				Products </div><br>
 				<input type="checkbox" name="product[]" id="product" value="handicrafts" /> Handicrafts <br>
 				<input type="checkbox" name="product[]" id="product" value="jewelery" /> Jewelery <br>
-				<input type="checkbox" name="product[]" id="product" value="snacks" /> Snacks <br>
-				<input type="submit" value="Sign up" name="s" style="height: 30px; width: 65px; border-radius: 5px; background-color: yellow;font-family: Perpetua; font-size: 18px; " /><br>
+				<input type="checkbox" name="product[]" id="product" value="snacks" /> Snacks <br><br>
+				<div style="height:30px;width:250px;">
+				<h1><input type="submit" value="Sign up" name="s" style="font-size:20px;"/></div><br></h1></h3>
 			</form>
-			<div>
-			<a href="index.html" style="text-decoration: underline;"> Go back to main page </a>
+			<div style="">
+			<a href="index.php"> <h2>Go back to main page</h2></a>
 			</center>
 	</body>
 </html>
