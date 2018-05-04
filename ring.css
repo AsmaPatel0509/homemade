@@ -5,8 +5,7 @@ body{
 .outer{
 	height: 1600px;
 	width: 1500px;
-	border: 1px solid black;
-	background-image: url('img/backgrnd2.jpg');	
+	background-image: url('img/bg42.jpg');	
 }
 .float{
 	float: left;
@@ -14,7 +13,6 @@ body{
 .innerhead{
 	height: 50px;
 	width: 1000px;
-	border: 1px solid black;
 	margin: 50px;
 	font-family: Perpetua;
 	color: orange;
@@ -26,29 +24,24 @@ body{
 	margin-left: 100px;
 	height: 450px;
 	width: 900px;
-	border: 1px solid black;
 }
 .innouter{
 	height: 350px;
 	width: 190px;
-	border: 1px solid black;
 	margin: 50px;
 }
 .inner1{
 	height:30px;
 	width: 173px;
-	border: 1px solid black;
 	text-align: center;
 }
 .inner2{
 	height: 210px;
 	width: 190px;
-	border: 1px solid black;
 }
 .inner3{
 	height: 30px;
 	width: 170px;
-	border: 1px solid black;
 }
 .font{
 	font-family: Perpetua;

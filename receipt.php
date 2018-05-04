@@ -54,7 +54,9 @@
 				?>
 
 	</table>
-	Bill Amount: <?php echo $total; ?>
+	Bill Amount: <?php echo $total; ?><br/><br/>
+	Payment mode will be Cash On Delivery.<br/><br/>
+	<a href="index.php" style="text-decoration: underline;"> Go back to main page </a>
 	<center>
 	</body>
 </html>

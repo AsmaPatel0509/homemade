@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -31,7 +32,7 @@
 		
 	if($_POST['list'])
 	{
-	$lists=$_POST['list'];
+		$lists=$_POST['list'];
 		$id=$_POST['i'];
 		$m_id=$_POST['mid'];
 		$qty=$_POST['qty'];
@@ -71,6 +72,8 @@
 					$result3=mysql_query($query3,$conn) or die($query."<br/><br/>".mysql_error());
 			
 				}
+				
+				header('location:receipt.php');
 	 	
 
 	 } 
@@ -87,7 +90,7 @@
 		//echo $result;
 	?>
 	
-	<form method="post" action="receipt.php">
+	<form method="post" >
 		<?php
 			
 			while ($row=mysql_fetch_array($result)) {
