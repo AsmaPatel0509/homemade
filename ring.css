@@ -1,47 +1,70 @@
 body{
 	background-color: gray;
 }
-
 .outer{
-	height: 1600px;
+	height: 1000px;
 	width: 1500px;
 	background-image: url('img/bg42.jpg');	
 }
 .float{
 	float: left;
 }
+.innerall{
+	height: 1000px;
+	width: 950px;
+	border: 1px solid black;
+}
+.innerad{
+	height: 1000px;
+	width: 500px;
+	border: 1px solid black; 
+}
+.ad1{
+	height: 350px;
+	width: 499px;
+}
+.ad2{
+	height: 300px;
+	width: 499px;
+}
 .innerhead{
 	height: 50px;
 	width: 1000px;
-	margin: 50px;
 	font-family: Perpetua;
-	color: orange;
-	font-size: 26px;
+	color: red;
+	font-size: 28px;
 	font-weight: bold;
-	padding: 10px;
+	padding: 20px;
+	padding-left: 40px;
 }
 .innermain{
 	margin-left: 100px;
-	height: 450px;
+	height: 300px;
 	width: 900px;
 }
 .innouter{
-	height: 350px;
+	height: 250px;
 	width: 190px;
-	margin: 50px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-bottom: 30px;
 }
 .inner1{
 	height:30px;
-	width: 173px;
+	width: 190px;
 	text-align: center;
 }
 .inner2{
 	height: 210px;
 	width: 190px;
+	margin-right: 10px;
 }
-.inner3{
+.iner3{
 	height: 30px;
 	width: 170px;
+}
+.empty{
+	height: 
 }
 .font{
 	font-family: Perpetua;
@@ -88,4 +111,7 @@ body{
 	font-size: 18px;
 	text-align: center;
 	color: maroon;
+}
+a{
+	text-decoration: none; 
 }

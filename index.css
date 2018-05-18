@@ -1,20 +1,33 @@
 body{
 	background-color: gray;
 }
-
 .outer{
 	height: 1000px;
 	width: 1500px;
-	border: none;
 	background-image: url('img/bg42.jpg');	
 }
 .float{
 	float: left;
 }
+.innerall{
+	height: 1000px;
+	width: 950px;
+}
+.innerad{
+	height: 1000px;
+	width: 500px;
+}
+.ad1{
+	height: 350px;
+	width: 499px;
+}
+.ad2{
+	height: 300px;
+	width: 499px;
+}
 .innerhead{
 	height: 30px;
 	width: 1000px;
-	border: none;
 	margin: 10px;
 	font-family: Perpetua;
 	color: red;
